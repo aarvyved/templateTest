@@ -6,7 +6,7 @@ GitRepo:
   gitProvider: GitIntegration
   path: aarvyved/templateTest
   branches:
-    include: master
+    include: main
  
  
 foo:
