@@ -1,1 +1,32 @@
 
+artifactoryIntegration: myArtifactoryIntegration
+ 
+GitRepo:
+  name: myGitRepo
+  gitProvider: GitIntegration
+  path: aarvyved/templateTest
+  branches:
+    include: master
+ 
+ 
+foo:
+  name: bar
+ 
+Image:
+  name: myDockerImage
+  sourceRepository: mySourceRepo     
+ 
+ 
+Pipeline:
+  name: myDockerPipeline
+ 
+DockerBuild:
+  name: myDockerBuild  
+  dockerFileName: Dockerfile
+  dockerImageName: <image name>
+ 
+DockerPush:
+  targetRepository: docker-local
+ 
+Bash:
+  name: myBashStep
