@@ -1,5 +1,5 @@
 
-artifactoryIntegration: myArtifactoryIntegration
+artifactoryIntegration: ArtIntegration
  
 GitRepo:
   name: myGitRepo
