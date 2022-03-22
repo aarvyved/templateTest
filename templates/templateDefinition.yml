@@ -1,8 +1,0 @@
-pipelines:
-  - name: basic_{{ .Values.name }}
-    steps:
-      - name: my_basic_step
-        type: Bash
-        execution:
-          onExecute:
-            - echo "hello world"
