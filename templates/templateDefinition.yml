@@ -1,31 +1,8 @@
 pipelines:
-  - name: basic
+  - name: basic_{{ .Values.name }}
     steps:
-      - name: basic1
+      - name: my_basic_step
         type: Bash
-        configuration:
-          runtime:
-            type: image
         execution:
           onExecute:
-            - printenv {{ .Values.foo.bar }}
-      - name: basic2
-        type: Bash
-        configuration:
-          runtime:
-            type: image
-          inputSteps:
-            - name: basic1
-        execution:
-          onExecute:
-            - printenv {{ .Values.foo.baz }}
-      - name: basic3
-        type: Bash
-        configuration:
-          runtime:
-            type: image
-          inputSteps:
-            - name: basic2
-        execution:
-          onExecute:
-            - printenv {{ .Values.foo.zoo }}
+            - echo "hello world"
